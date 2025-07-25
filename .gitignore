@@ -1,0 +1,45 @@
+# Arquivo .gitignore para projetos de Ciência da Computação
+
+### GERAL ###
+#Ignorar arquivos de log e temporários
+*.log
+tmp/
+temp/
+
+#Ignorar arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+### IDEs E EDITORES ###
+# Visual Studio Code
+.vscode/
+
+#IntelliJ / JetBrains
+.idea/
+
+### LINGUAGENS ###
+#Java
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+
+#C/C++
+*.o
+*.a
+*.so        
+*.out        
+*.exe
+
+#Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+*.venv
+
+### DADOS SENSÍVEIS ###
+.env
+config.json
+secrets.yml
