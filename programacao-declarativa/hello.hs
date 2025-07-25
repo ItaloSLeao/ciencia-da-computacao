@@ -1,0 +1,2 @@
+main = do
+    putStrLn "HELLO, WORLD IN HASKELL!!LONG LIVE CORINTHIANS!!!!!!!"

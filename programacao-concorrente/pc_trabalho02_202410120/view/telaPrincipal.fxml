@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane cache="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="true" prefHeight="700.0" prefWidth="1200.0" snapToPixel="true" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ControllerTelaPrincipal">
+  <children>
+    <ImageView fitHeight="700.0" fitWidth="1200.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../assets/fundo-train-piece.png" />
+      </image>
+    </ImageView>
+    <Slider fx:id="sliderTrem1" blendMode="SRC_OVER" cache="true" cacheHint="QUALITY" layoutX="80.0" layoutY="293.0" mouseTransparent="false" prefHeight="44.0" prefWidth="217.0" />
+    <Slider fx:id="sliderTrem2" layoutX="80.0" layoutY="361.0" prefHeight="44.0" prefWidth="217.0" />
+    <ChoiceBox fx:id="choiceBox_posicoes" blendMode="MULTIPLY" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" disable="false" focusTraversable="true" layoutX="1037.0" layoutY="310.0" mouseTransparent="false" prefHeight="35.0" prefWidth="150.0" />
+    <ChoiceBox fx:id="choiceBox_solucoes" blendMode="MULTIPLY" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" disable="false" focusTraversable="true" layoutX="1037.0" layoutY="375.0" mouseTransparent="false" prefHeight="35.0" prefWidth="150.0" />
+    <ImageView id="" fx:id="imagemBotaoFechar" fitHeight="53.0" fitWidth="59.74906239827474" layoutX="1118.0" layoutY="7.0" mouseTransparent="false" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../assets/close-button.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="imagemBotaoReset" fitHeight="53.0" fitWidth="53.79104268391927" layoutX="1037.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../assets/reset-button.png" />
+      </image>
+    </ImageView>
+    <Button fx:id="botaoDeFechar" disable="false" focusTraversable="false" layoutX="1132.0" layoutY="13.0" minWidth="31.0" mnemonicParsing="false" onAction="#fecharAplicacao" opacity="0.0" prefHeight="44.0" prefWidth="31.0" text="CLOSE" underline="false" visible="true"> 
+      <tooltip>
+          <Tooltip text="FECHAR" />
+      </tooltip>
+    </Button>
+    <Button fx:id="botaoReset" focusTraversable="false" layoutX="1049.0" layoutY="16.0" minWidth="30.53424072265625" mnemonicParsing="false" onAction="#resetarPosicoesEVelocidades" opacity="0.0" prefHeight="35.0" prefWidth="30.53424072265625" text="RESET" visible="true"> 
+      <tooltip>
+          <Tooltip text="RESETAR" />
+      </tooltip>
+    </Button>
+    <ImageView fx:id="promptChoiceBox1" fitHeight="32.50" fitWidth="120.0" layoutX="1043.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true" visible="true">
+      <image>
+        <Image url="@../assets/prompt-choicebox-telaPrincipal.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="40.0" fitWidth="125.0" layoutX="1045.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true" visible="true">
+      <image>
+        <Image url="@../assets/imagem-label-posicoes-iniciais.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="promptChoiceBox2" fitHeight="32.50" fitWidth="120.0" layoutX="1043.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true" visible="true">
+      <image>
+        <Image url="@../assets/prompt-choicebox-telaPrincipal.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="85.0" fitWidth="145.0" layoutX="1040.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" visible="true">
+      <image>
+        <Image url="@../assets/imagem-label-solucoes.png" />
+      </image>
+    </ImageView>
+    <ImageView fx:id="imagemTrem1" fitHeight="99.32262349128723" fitWidth="40.1554809383003" layoutX="469.0" layoutY="601.0" opacity="0.0" pickOnBounds="true" preserveRatio="false">
+        <image>
+          <Image url="@../assets/trem1.png" />
+        </image>
+    </ImageView>
+    <ImageView fx:id="imagemTrem2" fitHeight="99.32262349128723" fitWidth="40.1554809383003" layoutX="515.0" layoutY="601.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="0.0">
+        <image>
+          <Image url="@../assets/trem2.png" />
+        </image>
+    </ImageView>
+  </children>
+</AnchorPane>

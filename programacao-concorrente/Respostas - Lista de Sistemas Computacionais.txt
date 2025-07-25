@@ -1,0 +1,63 @@
+19. 
+Se enxergarmos o programa de um computador como uma classe modeladora, podemos visualizar um processo como uma instância que está sendo executada desse programa, com recursos próprios alocados como o código do programa e o estado de suas atividades atuais. Nesse sentido, a thread é a forma de encarar um processo como uma divisão entre duas ou mais tarefas, que podem ser executadas em concorrência, simulando uma simultaneidade de execução.
+
+20. 
+Em um sistema computacional, a execução de um programa, um processo, pode criar outros processos que estão atrelados a ele, chamados subprocessos. Essa relação de associatividade entre os subprocessos criados pelo processo criador (pai) é chamada de hierarquia de processos. Essa organização processual é muito importante nos sistemas Unix e Unix-like (como o Linux), pois nestes cada tarefa realizada é tratada como um subprocesso que herda do processo pai de todos, UNIX, que atribui a cada filho o sinal correspondente para realizar o que lhe foi requerido.
+
+21. 
+Existem duas formas elementares de implementação de threads em um sistema operacional: User-level Threads (ULT) e Kernel-Level Threads (KLT). As ULTs, chamadas threads leves, são uma das implementações de threads ao nível do usuário no Sistema Operacional (SO), suportadas pela aplicação e pelos pacotes de rotinas das threads fornecidos pela biblioteca da linguagem de programação que está sendo usada (java.lang.Threads em Java). As KLTs, entretanto, estão a total conhecimento do núcleo do SO e suas gestões são subsidiadas pelo mesmo. As Kernel-Level Threads permitem o multiprocessamento em sistemas computacionais paralelos, porém em sistemas concorrentes têm a desvantagem de gastar operações desnecessariamente com as mudanças de acesso às estruturas de dados.
+
+22. 
+Um processo de tradução de software é, simplesmente, a conversão do código-fonte escrito em uma linguagem de programação, desde baixo a alto nível, para a linguagem de máquina, composta de códigos binários, de modo que o computador faça a execução das instruções. Os dois tipos mais comuns de tradução são: Interpretação, pela qual um interpretador recebe a primeira instrução, confere a sintaxe, faz a conversão para código de máquina, executa e passa para a próxima instrução, para repetir o processo, de forma que a instrução anterior é perdida enquanto se traduz a atual; Compilação, pela qual um compilador recebe a primeira instrução, confere a sintaxe, se estiver correta, faz a conversão para código de máquina e passa para a próxima até terminar a tradução da última instrução e gerar o código executável completo do programa para o computador rodar as instruções. 
+
+23. 
+Muitas IDEs, ao serem acionadas para compilar, dão a impressão de realizar, automaticamente, a tradução e a execução dentro desse comando 'compile'. Entretanto, a compilação é apenas o processo de tradução do código-fonte para o código executável, em linguagem de máquina. A execução é feita pelo carregamento do programa compilado na memória principal, para que a CPU possa processar todas as instruções e dados em operação. O compilador não tem a tarefa de fazer a execução, apenas a tradução e, a exemplo disso, fica mais claro quando se pensa nos comandos de compilação (javac Arquivo.java) e de execução no terminal (java Arquivo). 
+
+24. 
+Ao executar um programa em um Sistema Computacional, a primeira tarefa é feita pelo Sistema Operacional, que aloca recursos necessários do hardware, como espaços de memória e identificação de processos na Unidade de Controle (UC). O contexto de execução é criado pelo SO com o gerenciamento dos processos (uso dos registradores gerais e program-counter para os estados processuais) e isolamento entre as aplicações. A UC faz o envio de sinais de controle a todos os componentes físicos que serão usados, fazendo a regulagem dos dispositivos de Entrada e Saída (E/S), da memória, e até da CPU, onde aquela está inserida. O código, então, é carregado da memória secundária para a memória principal, a RAM mais especificamente. Finalmente, as instruções e os dados, da memória ou entrada, são enviadas para a ULA do processador, pelo barramento, são calculados, seus resultados enviados para a memória novamente ou para a saída e, desse modo, um programa é executado. 
+
+25. 		
+BASE: Responsável por armazenar as instruções do sistema operacional; 
+ALTA: Responsável por armazenar as instruções dos programas e apps
+EXPANDIDA: Área da memória onde serão armazenadas as demais informações
+
+26. A memória compartilhada permite o acesso de processos distintos à mesma região de memória física, mesmo com ambientes virtuais separados, garantindo maior agilidade e eficiência na execução dos programas, uma vez que processos distintos correspondem à mesma memória física.
+
+
+27. 
+Ao declarar uma variável inteira em um programa, é reservado um espaço de memória para armazenar o conteúdo dessa variável, geralmente em forma de heap e pilha. O identificador da variável, na sintaxe da linguagem de programação, é associado ao endereço do espaço de memória reservado a ela. É feita a inicialização do valor da variável, podendo ser atribuído 'lixo' (em linguagens da família C, por exemplo) ou 0 (Java, por exemplo), caso o usuário não inicialize, propriamente.
+
+28. 
+Quando um incremento de variável inteira é executado no programa, a princípio, a CPU carrega o valor da variável armazenada na memória principal para um registrador, que vai guardar seu valor por um curto tempo. A ULA realiza os cálculos de incremento, usando o valor inicial armazenado no registrador, e então, a CPU devolve o valor atualizado para a memória armazenar no espaço correspondente à variável.
+
+29. Os sistemas computacionais podem ser classificados da seguinte forma, no tocante à administração dos processos pela(s) CPU(s): Sistemas concorrentes, paralelos e distribuídos. Os sistemas computacionais concorrentes são caracterizados pela presença de uma CPU única, de modo que os processos são executados um por vez, isto é, o processador não realiza duas tarefas ao mesmo tempo. Os sistemas paralelos, entretanto, têm a presença de duas ou mais CPUs permitindo o multiprocessamento, em que cada atividade no computador é realizada em cada CPU, ou seja, um paralelismo de funções.  Quanto aos sistemas distribuídos, eles são caracterizados pela ligação entre diferentes máquinas por um meio de comunicação, na maioria das vezes uma rede de computadores, de modo que há também o paralelismo de tarefas, porém sem necessitar da presença de duas CPUs ou mais. Os sistemas concorrentes podem equiparar esse poder de processamento paralelo dos outros sistemas com boas técnicas de programação e a aplicação do pseudoparalelismo, visando simular à percepção humana o paralelismo verdadeiro de tarefas. 
+
+30. Os sistemas fracamente acoplados podem ser definidos como aqueles em que os componentes deles têm uma baixa ou nenhuma dependência entre si, sendo relativamente independentes. A comunicação entre esses componentes é usualmente feita por meio de mensagens via redes, como por exemplo nos sistemas distribuídos.
+
+31. Um sistema fortemente acoplado, por sua vez, é aquele em que seus componentes têm uma alta dependência entre si, principalmente no que tange ao compartilhamento de uma única memória física e dispositivos de entrada e saída entre os processadores.
+
+32. A diferenciação entre os conceitos de multiprocessadores e multicomputadores está fortemente relacionada aos sistemas fortemente e fracamente acoplados, haja vista que o multiprocessador é um sistema fortemente acoplado, em que duas ou mais CPUs compartilham fisicamente a mesma memória, e que o multicomputador é um sistema fracamente acoplado, em que os nós desse sistema são independentes fisicamente e conectados em uma rede.
+
+33. Os dois modelos de comunicação entre processos, memória compartilhada e troca de mensagens, se diferenciam da seguinte forma: a memória compartilhada oferece uma maneira direta de troca de dados, de modo que uma região de memória é alocada e compartilhada entre os processos, na qual cada processo pode ler e escrever diretamente na mesma, sem a necessidade de mecanismos de comunicação adicionais; pela troca de mensagens, como nome propriamente sugere, os processos e programas se comunicam enviando e recebendo mensagens, com dados, solicitações ou comandos, através de redes, com um escalonamento processual melhor.
+
+34. SISD (Single Instruction, Single Data): Computador tradicional sequencial
+SIMD (Single Instruction, Multiple Data): Mesma instrução em múltiplos dados (GPUs)
+MISD (Multiple Instruction, Single Data): Múltiplas instruções no mesmo dado (raro)
+MIMD (Multiple Instruction, Multiple Data): Múltiplos processadores independentes
+
+35. O Bloco de Controle de Processos (BCP) é uma estrutura de dados que armazena todas as informações acerca de um processo executado por um SO, como: seu estado, os recursos alocados na memória, os dispositivos de E/S envolvidos, seu program-counter, o estado do processador, a prioridade do processo e o contexto de execução.
+
+36. O time-sharing é uma técnica do paradigma de multiprogramação, em que o tempo da CPU é dividido em forma de múltiplos processos, de modo que seja realizada a alternância entre as tarefas. Enquanto um processo não está mais usando o poder de processamento da CPU, ele fica à espera e outro processo pode ser processado. Essa troca de 'jobs' é suficientemente rápida para que, do ponto de vista do usuário, as tarefas pareçam ser realizadas simultaneamente, simulando um paralelismo, isto é, um pseudoparalelismo.
+
+37. Um diagrama de estados de processos é uma abstração em forma gráfica que modela os diversos estados que um processo pode assumir, as relações de transições entre eles durante seu ciclo de vida e os eventos que desencadeiam as transições. Ele permite visualizar claramente a dinâmica dos processos e garante uma maior compreensão e noção intuitiva do observador acerca do sistema de evolução dos processos.
+
+38. Os estados do diagrama de estados estão associados às seguintes etapas do ciclo de execução: Novo associado ao carregamento do programa, o SO aloca os recursos e carrega o código executável na memória; Pronto a aguardar a alocação da CPU, o programa está carregado na memória e aguarda o escalonador despachá-lo ao processador; Executando à execução das instruções, o processador está rodando as instruções, realizando os cálculos, acessando a memória e dispositivos de E/S; Bloqueado à espera por eventos, o programa aguarda um recurso consequente de um evento ou de um processo de E/S. Finalizado à finalização do programa, o programa foi completamente executado ou abortado no meio das operações, realizando a saída dos cálculos e liberação dos recursos alocados na instanciação.
+
+39. O time-slicing, ou fatiamento de tempo, como próprio nome sugere, é uma técnica que divide uma unidade tempo em fatias menores, nesse caso, o tempo de processamento de várias tarefas é distribuído conforme a necessidade de execução de cada processo, garantindo um melhor aproveitamento e uma menor ociosidade do poder de processamento físico dos sistemas computacionais, com a aplicação do pseudoparalelismo.
+
+40. A troca de contexto é um processo computacional realizado pelo SO de armazenar e restaurar o estado de um processador, através dos registradores, de modo que múltiplos processos sejam gerenciados e, após a saída de uma tarefa do processamento atual, ela possa ser restaurada e volte para o exato mesmo ponto de execução armazenado quando saiu. 
+
+41. Os estados existentes no diagrama de estados de processos são: Novo, o processo está sendo instanciado; Pronto, o processo está instanciado e aguarda despacho para a CPU; Executando, as instruções estão sendo processadas; Bloqueado, aguarda o acontecimento de um evento; Finalizado, o processo cumpriu seu ciclo de vida ou foi interrompido e finalizado sem estar completo.
+
+42. As duas operações básicas da troca de contexto de processos são: Armazenar, o contexto atual do processo (seu estado, estado do processador, program-counter etc.) são armazenados; Restaurar, o contexto do próximo processo a ser executado, apontado pelo program-counter do processo atual, é carregado.
+
