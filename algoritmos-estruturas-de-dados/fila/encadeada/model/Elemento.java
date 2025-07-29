@@ -1,6 +1,5 @@
 package model;
 
-
 public final class Elemento<T> {
   private T dado; //Valor do tipo Object para o elemento da lista
   private Elemento<T> anterior, proximo; //Referencia ao endereco dos Elemento anterior e proximo, que antecede e sucede, respectivamente, na lista o Elemento.this de valor T dado

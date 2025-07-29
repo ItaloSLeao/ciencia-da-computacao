@@ -1,6 +1,5 @@
 package model;
 
-
 import exceptions.ContainerVazioException;
 import exceptions.ObjetoNaoEncontradoException;
 

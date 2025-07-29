@@ -1,4 +1,3 @@
-package aulaPratica01;
 
 import java.util.Arrays; //Importa a classe de Arrays da biblioteca Java
 

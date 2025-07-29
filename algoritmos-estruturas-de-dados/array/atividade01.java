@@ -1,4 +1,3 @@
-package aulaPratica01;
 import java.util.Random;
 
 public class atividade01{

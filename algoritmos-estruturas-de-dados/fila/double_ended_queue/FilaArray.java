@@ -1,4 +1,3 @@
-package atividade02;
 
 import exceptions.ContainerVazioException;
 import exceptions.ContainerCheioException;

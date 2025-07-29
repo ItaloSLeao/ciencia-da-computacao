@@ -1,4 +1,3 @@
-package atividade03;
 
 public interface Cursor {
   Object getDado();
